@@ -29,7 +29,7 @@ php artisan jwt:secret
 ## Serve
 
 ```
-php -S localhost:5030 -t public
+php -S localhost:5020 -t public
 ```
 
 
