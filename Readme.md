@@ -2,11 +2,9 @@
 Starter project for creating a microservice with Laravel Lumen
 
 
-## Usage
 
 
-
-Clone repo
+## Clone repo & install
 
 ```console
 git clone https://github.com/glugox/lumen-microservice-starter.git projectname
@@ -16,14 +14,26 @@ git clone https://github.com/glugox/lumen-microservice-starter.git projectname
 cd projectname && composer install
 ```
 
-Rename .env.example to .env and update path to db file in .env
+## Env
+
+```console
+mv .env.example .env
+```
+
+Update path to db file in .env
 
 ```console
 php artisan jwt:secret
 ```
 
+## Serve
 
-POST to http://localhost:5020/auth/login
+```
+php -S localhost:5030 -t public
+```
+
+
+## POST to http://localhost:5020/auth/login
 
 Content-Type : application/json
 
@@ -33,9 +43,7 @@ Content-Type : application/json
 }
 
 
-
-Create models...
-
+## Create models
 
 ```console
 php artisan make:migration --table=entity CreateEntityTable
@@ -43,6 +51,3 @@ php artisan make:model Entity -cfrm
 ```
 
 
-```
-
-```
